@@ -33,8 +33,8 @@ const TabMenu1 = ({ styles }: StyleProps) => {
     setCurrentId(id);
   }
 
-  
-  data.find((item) => item.id === currentId)?.description || '';
+
+  const currentDescription = data.find((item) => item.id === currentId)?.description || '';
 
   return (
     <>
@@ -45,7 +45,7 @@ const TabMenu1 = ({ styles }: StyleProps) => {
             <TabItem {...d} key={d.id} current={currentId === d.id} toggle={toggleItem(d.id)} styles={styles} />
           ))}
         </ul>
-        <div className={styles.description}></div>
+        <div className={styles.description}>{currentDescription}</div>
       </div>
     </>
   )
