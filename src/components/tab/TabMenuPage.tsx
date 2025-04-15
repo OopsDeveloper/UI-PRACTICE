@@ -1,8 +1,13 @@
-export default function TabMenuPage() {
+import TabMenu1 from './add/1_r';
+import styles from './TabMenuPage.module.css';
+
+const TabMenuPage = () => {
   return (
-    <div>
-      kkkkkkkk
-    </div>
+    <>
+      <TabMenu1 styles={styles}/>
+    </>
   );
 }
+
+export default TabMenuPage;
 
